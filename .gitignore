@@ -1,0 +1,83 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# C / C++ compiled output
+*.o
+*.obj
+*.exe
+*.out
+a.out
+*.gch
+*.so
+*.dll
+
+# Assembly build artifacts
+*.lst
+*.map
+*.bin
+
+# Java compiled output
+*.class
+*.jar
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Node / JavaScript
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Dart
+.dart_tool/
+.packages
+build/
+
+# PHP
+vendor/
+
+# Logs & env
+*.log
+.env
+.env.local
+
+# ------------------------------------------------------------
+# Force-track all source files.
+# This repo exists to share code, so source files must never be
+# excluded by a build-artifact rule above (or one added later).
+# ------------------------------------------------------------
+!*.c
+!*.C
+!*.h
+!*.cpp
+!*.asm
+!*.java
+!*.py
+!*.js
+!*.php
+!*.dart
+!*.md
+!**/*.c
+!**/*.C
+!**/*.h
+!**/*.cpp
+!**/*.asm
+!**/*.java
+!**/*.py
+!**/*.js
+!**/*.php
+!**/*.dart
+!**/*.md
