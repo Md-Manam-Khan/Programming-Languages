@@ -1,0 +1,45 @@
+DATA SEGMENT
+    ARR DB 2,4,6,8,10
+    MSG DB 'Sum = $'
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+    LEA DX, MSG
+    MOV AH, 09H
+    INT 21H
+
+    MOV SI, 0
+    MOV CX, 5
+
+PUSH_LOOP:
+    MOV AL, ARR[SI]
+    MOV AH, 0
+    PUSH AX
+    INC SI
+    LOOP PUSH_LOOP
+
+    MOV CX, 5
+    MOV BX, 0
+
+POP_LOOP:
+    POP AX
+    ADD BX, AX
+    LOOP POP_LOOP
+
+    MOV AX, BX
+    ADD AL, 30H
+    MOV DL, AL
+    MOV AH, 02H
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

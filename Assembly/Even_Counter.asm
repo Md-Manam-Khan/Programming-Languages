@@ -1,0 +1,49 @@
+DATA SEGMENT
+    ARR DB 1,2,3,4,5,6
+    MSG DB 'Even Count = $'
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+    LEA DX, MSG
+    MOV AH, 09H
+    INT 21H
+
+    MOV SI, 0
+    MOV CX, 6
+
+PUSH_LOOP:
+    MOV AL, ARR[SI]
+    MOV AH, 0
+    PUSH AX
+    INC SI
+    LOOP PUSH_LOOP
+
+    MOV CX, 6
+    MOV BL, 0
+
+POP_LOOP:
+    POP AX
+    AND AL, 1
+    CMP AL, 0
+    JNE SKIP
+    INC BL
+
+SKIP:
+    LOOP POP_LOOP
+
+    ADD BL, 30H
+    MOV DL, BL
+    MOV AH, 02H
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

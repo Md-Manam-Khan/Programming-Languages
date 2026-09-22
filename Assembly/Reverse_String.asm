@@ -1,0 +1,40 @@
+DATA SEGMENT
+    STR DB 'HELLO'
+    MSG DB 'Reversed: $'
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+    LEA DX, MSG
+    MOV AH, 09H
+    INT 21H
+
+    MOV SI, 0
+    MOV CX, 5
+
+PUSH_LOOP:
+    MOV AL, STR[SI]
+    MOV AH, 0
+    PUSH AX
+    INC SI
+    LOOP PUSH_LOOP
+
+    MOV CX, 5
+
+POP_LOOP:
+    POP AX
+    MOV DL, AL
+    MOV AH, 02H
+    INT 21H
+    LOOP POP_LOOP
+
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

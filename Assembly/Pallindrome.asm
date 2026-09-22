@@ -1,0 +1,49 @@
+DATA SEGMENT
+    STR DB 'MADAM'
+    MSG1 DB 'Palindrome$'
+    MSG2 DB 'Not Palindrome$'
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+    MOV SI, 0
+    MOV CX, 5
+
+PUSH_LOOP:
+    MOV AL, STR[SI]
+    MOV AH, 0
+    PUSH AX
+    INC SI
+    LOOP PUSH_LOOP
+
+    MOV SI, 0
+    MOV CX, 5
+
+CHECK:
+    POP AX
+    CMP AL, STR[SI]
+    JNE NOT_PAL
+    INC SI
+    LOOP CHECK
+
+    LEA DX, MSG1
+    MOV AH, 09H
+    INT 21H
+    JMP END_PROG
+
+NOT_PAL:
+    LEA DX, MSG2
+    MOV AH, 09H
+    INT 21H
+
+END_PROG:
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START
