@@ -3,32 +3,47 @@
 # Java
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![Focus](https://img.shields.io/badge/focus-OOP-blue)
-![Status](https://img.shields.io/badge/status-coming%20soon-orange)
+![Focus](https://img.shields.io/badge/focus-OOP%20%2F%20Android--oriented-blue)
+![Status](https://img.shields.io/badge/status-ongoing-yellow)
 
-Java is this repository's home for object-oriented programming taken seriously — where OOP isn't an optional style but the way the language is built.
+Java is this repository's home for object-oriented programming taken seriously — where OOP isn't an optional style but the way the language is built. Since Android development runs on the same OOP backbone, this folder is deliberately shaped to double as a runway toward that: every concept here is one Android will eventually lean on directly.
 
 ---
 
-## 📌 What This Folder Will Cover
+## 📌 What This Folder Covers
 
-Planned progression:
+Starting point: syntax, I/O, and the small stuff Java does differently from C. From there, the path moves into OOP proper and the pieces that matter most once Android enters the picture:
 
-- Classes, objects, and the structure of a Java program
-- Fields, methods, and constructors
-- Access modifiers and encapsulation
-- Inheritance and class hierarchies
-- Method overriding and polymorphism
-- Abstract classes and interfaces
+- Core syntax, variables, input and output
+- Control flow and loops in Java's style
+- Arrays and String handling
+- Methods, parameters, and overloading
+- Classes, objects, and constructors
+- Encapsulation, access modifiers, and the `this` keyword
 - Static members and class-level behaviour
-- Exception handling
-- Collections and working with groups of objects
+- Inheritance, `super`, and method overriding
+- Polymorphism, abstract classes, and interfaces
+- Anonymous classes (the pattern behind most Android listeners)
+- Exception handling, including custom exceptions
+- Core collections: `ArrayList`, `HashMap`, and working with groups of objects
+- Enums and generics basics
+
+Nothing here is Android-specific code — no SDK, no XML layouts. It's the OOP foundation that makes Android code readable once you get there, built the same disciplined way the C folder builds fundamentals.
 
 ---
 
-## 🧭 How This Folder Will Be Organised
+## 🧭 How This Folder Is Organised
 
-Files will be named after the concept they demonstrate, arranged so that each new idea only relies on ones introduced earlier. Where a topic needs several programs to make sense, those will be grouped together and readable in sequence.
+Files are **not** numbered — they're prefixed with a lowercase four-letter sequence, incrementing like a counter: `aaaa`, `aaab`, `aaac`, `aaad`, and so on. That sequence is the learning order, exactly the same role the `000`–`215` numbers play in the C folder — read from `aaaa` upward and each file assumes only what came before it.
+
+```text
+aaaa_...
+aaab_...
+aaac_...
+aaad_...
+```
+
+The filename after the prefix describes the concept in PascalCase, and — because Java requires the public class name to match the filename — that description also becomes the class name inside the file.
 
 ---
 
@@ -50,6 +65,7 @@ The filename must match the public class name inside it — Java enforces this, 
 - **Think in objects before you write.** Ask what things exist in the problem and what each one knows and does.
 - **Don't fight the verbosity.** Java asks you to be explicit; that explicitness is what makes large programs readable later.
 - **Build the same program twice** — once badly with everything in `main`, once properly with classes. The difference is the lesson.
+- **Pay extra attention to interfaces and anonymous classes.** They look like a minor OOP feature here — they're the backbone of how Android code is written.
 
 ---
 
@@ -61,7 +77,7 @@ If you've done OOP in C++ already, Java will feel familiar but stricter. If this
 
 ## 🚧 Status
 
-This folder is a placeholder for now. Files will appear here as I work through the language.
+Early stage — core syntax and I/O are in place, and the folder is actively filling in toward full OOP coverage and the Android-relevant topics listed above.
 
 ---
 

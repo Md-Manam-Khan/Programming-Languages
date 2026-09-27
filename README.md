@@ -35,9 +35,10 @@ The idea is simple: instead of scattered snippets, this repo gives a beginner a 
 
 Different languages here serve different purposes:
 
-- **C** — the foundation. Basics, fundamentals, and core programming logic.
-- **C++** — competitive programming and object-oriented work.
-- **Java** — object-oriented programming in depth.
+- **C** — the foundation. Basics, fundamentals, and core programming logic, built out in full.
+- **C++** — a light pass on OOP syntax, but the real focus is competitive programming: STL, algorithmic patterns, and problem-solving tools.
+- **Java** — object-oriented programming taken seriously, on a path that also builds toward Android development.
+- **Assembly** — the lowest level here: 8086 assembly, stripped of every abstraction the higher-level languages provide.
 - **Others** — each added with its own focus as I learn and use them.
 
 ---
@@ -47,8 +48,8 @@ Different languages here serve different purposes:
 | Language | Focus | Folder |
 |---|---|---|
 | ![C](https://img.shields.io/badge/-C-00599C?style=flat&logo=c&logoColor=white) | Fundamentals & core programming logic | [`/C`](./C) |
-| ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?style=flat&logo=cplusplus&logoColor=white) | OOP & competitive programming | [`/C++`](./C++) |
-| ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=openjdk&logoColor=white) | Object-oriented programming | [`/Java`](./Java) |
+| ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?style=flat&logo=cplusplus&logoColor=white) | OOP basics, competitive programming & STL | [`/C++`](./C++) |
+| ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=openjdk&logoColor=white) | OOP in depth, building toward Android | [`/Java`](./Java) |
 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | Scripting & problem solving | [`/Python`](./Python) |
 | ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Web behaviour & logic | [`/JavaScript`](./JavaScript) |
 | ![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white) | Server-side scripting | [`/PHP`](./PHP) |
@@ -65,8 +66,8 @@ Each folder has its own README explaining what that language covers here and how
 Programming-Languages/
 │
 ├── C/              → Fundamentals, numbered in learning order
-├── C++/            → OOP concepts & competitive programming
-├── Java/           → Object-oriented programming
+├── C++/            → Light OOP syntax + competitive programming & STL
+├── Java/           → Object-oriented programming, building toward Android
 ├── Python/         → Scripting & problem solving
 ├── JavaScript/     → Web-facing logic
 ├── PHP/            → Server-side scripting
