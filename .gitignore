@@ -8,6 +8,10 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+*.iml
+.classpath
+.project
+.settings/
 
 # C / C++ compiled output
 *.o
@@ -28,6 +32,8 @@ a.out
 *.class
 *.jar
 target/
+bin/
+out/
 
 # Python
 __pycache__/
