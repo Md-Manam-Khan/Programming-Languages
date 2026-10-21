@@ -15,17 +15,17 @@ int main ()
         printf("%d\n", manam[i]);
     }
     big = manam[0];
-    for (i = 0; i < n; i++)
+    for (i = 1; i < n; i++)
     {
-        if (big <= manam[i])
+        if (big < manam[i])
         {
             big = manam[i];
         }
     }
     small = manam[0];
-    for (i = 0; i < n; i++)
+    for (i = 1; i < n; i++)
     {
-        if (small >= manam[i])
+        if (small > manam[i])
         {
             small = manam[i];
         }
